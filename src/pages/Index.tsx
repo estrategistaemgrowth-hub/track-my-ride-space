@@ -5,7 +5,7 @@ import ServicesSection from "@/components/ServicesSection";
 import SegmentsSection from "@/components/SegmentsSection";
 import SecuritySection from "@/components/SecuritySection";
 import CoverageSection from "@/components/CoverageSection";
-import ContactSection from "@/components/ContactSection";
+
 import Footer from "@/components/Footer";
 
 const Index = () => (

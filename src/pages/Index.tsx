@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 
 const Index = () => (
   <>
+    <ContactPopup />
     <Header />
     <HeroSection />
     <AboutSection />

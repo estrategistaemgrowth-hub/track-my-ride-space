@@ -17,7 +17,7 @@ const Index = () => (
     <SegmentsSection />
     <SecuritySection />
     <CoverageSection />
-    <ContactSection />
+    
     <Footer />
   </>
 );

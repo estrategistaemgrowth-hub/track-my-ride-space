@@ -17,7 +17,7 @@ const Index = () => (
     <SegmentsSection />
     <SecuritySection />
     <CoverageSection />
-    
+    <div className="h-16 bg-background" />
     <Footer />
   </>
 );

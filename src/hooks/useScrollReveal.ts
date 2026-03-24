@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 
 interface ScrollRevealOptions {
   threshold?: number;
@@ -34,4 +34,42 @@ export function useScrollReveal<T extends HTMLElement = HTMLDivElement>(
   }, [threshold, rootMargin, once]);
 
   return { ref, isVisible };
+}
+
+/** Hook to observe multiple children within a container */
+export function useStaggerReveal<T extends HTMLElement = HTMLDivElement>(
+  options: ScrollRevealOptions = {}
+) {
+  const { threshold = 0.1, rootMargin = "0px 0px -40px 0px", once = true } = options;
+  const containerRef = useRef<T>(null);
+  const [visibleItems, setVisibleItems] = useState<Set<number>>(new Set());
+
+  const observerCallback = useCallback(
+    (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        const index = Number(entry.target.getAttribute("data-index"));
+        if (entry.isIntersecting) {
+          setVisibleItems((prev) => new Set([...prev, index]));
+        }
+      });
+    },
+    []
+  );
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const observer = new IntersectionObserver(observerCallback, {
+      threshold,
+      rootMargin,
+    });
+
+    const children = container.querySelectorAll("[data-index]");
+    children.forEach((child) => observer.observe(child));
+
+    return () => observer.disconnect();
+  }, [threshold, rootMargin, observerCallback]);
+
+  return { containerRef, visibleItems };
 }

@@ -14,7 +14,7 @@ const AboutSection = () => {
         style={{ backgroundImage: `url(${aboutBg})` }}
       />
       <div className="absolute inset-0 bg-background/85 backdrop-blur-[2px]" />
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div ref={leftRef} className={`reveal-left ${leftVisible ? "visible" : ""}`}>
             <p className="font-heading text-secondary font-bold text-sm tracking-widest uppercase mb-3">Quem Somos</p>

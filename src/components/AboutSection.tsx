@@ -1,5 +1,4 @@
 import truckImg from "@/assets/truck_clean.png";
-import aboutBg from "@/assets/about_bg.png";
 import { TrendingUp, Shield, MapPin } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
@@ -8,13 +7,8 @@ const AboutSection = () => {
   const { ref: rightRef, isVisible: rightVisible } = useScrollReveal();
 
   return (
-    <section id="quem-somos" className="py-24 relative overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${aboutBg})` }}
-      />
-      <div className="absolute inset-0 bg-background/85 backdrop-blur-[2px]" />
-      <div className="container mx-auto px-4 relative z-10">
+    <section id="quem-somos" className="py-24 bg-background">
+      <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div ref={leftRef} className={`reveal-left ${leftVisible ? "visible" : ""}`}>
             <p className="font-heading text-secondary font-bold text-sm tracking-widest uppercase mb-3">Quem Somos</p>

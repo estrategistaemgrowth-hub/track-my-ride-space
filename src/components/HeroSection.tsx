@@ -2,7 +2,7 @@ import heroBg from "@/assets/hero_bg.png";
 
 const HeroSection = () => (
   <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden bg-primary">
-    <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+    <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover object-right" />
     <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/50" />
 
     <div className="container mx-auto px-4 relative z-10 pt-24">

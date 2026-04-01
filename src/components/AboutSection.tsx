@@ -1,4 +1,4 @@
-import warehouseImg from "@/assets/warehouse.jpg";
+import truckImg from "@/assets/truck_new.png";
 import { TrendingUp, Shield, MapPin } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 

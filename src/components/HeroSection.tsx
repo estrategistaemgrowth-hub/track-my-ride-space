@@ -1,4 +1,4 @@
-import truckImg from "@/assets/truck_new.png";
+import truckImg from "@/assets/truck_clean.png";
 
 const HeroSection = () => (
   <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden bg-primary">

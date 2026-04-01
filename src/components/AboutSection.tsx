@@ -1,4 +1,4 @@
-import warehouseImg from "@/assets/warehouse.jpg";
+import truckImg from "@/assets/truck_new.png";
 import { TrendingUp, Shield, MapPin } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
@@ -40,12 +40,12 @@ const AboutSection = () => {
           </div>
           <div ref={rightRef} className={`relative reveal-right ${rightVisible ? "visible" : ""}`}>
             <img
-              src={warehouseImg}
-              alt="Armazém TFP Logística"
-              className="rounded-2xl shadow-2xl w-full"
+              src={truckImg}
+              alt="Caminhão TFP Logística"
+              className="w-full drop-shadow-2xl"
               loading="lazy"
-              width={1280}
-              height={720}
+              width={1400}
+              height={800}
             />
             <div className="absolute -bottom-6 -left-6 bg-secondary text-secondary-foreground p-6 rounded-xl font-heading font-extrabold text-2xl shadow-xl hidden md:block float">
               +10 anos<br /><span className="text-base font-semibold opacity-90">de experiência</span>

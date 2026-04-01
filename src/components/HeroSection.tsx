@@ -38,15 +38,6 @@ const HeroSection = () => (
             </a>
           </div>
         </div>
-        <div className="hidden lg:flex items-center justify-center animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
-          <img
-            src={truckImg}
-            alt="Caminhão TFP Logística"
-            className="w-full max-w-2xl drop-shadow-2xl float"
-            width={1400}
-            height={800}
-          />
-        </div>
       </div>
     </div>
   </section>

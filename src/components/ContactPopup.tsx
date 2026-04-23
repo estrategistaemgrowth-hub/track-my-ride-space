@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { X, Send } from "lucide-react";
 import { z } from "zod";
+import { OPEN_CONTACT_POPUP_EVENT } from "@/lib/contactPopup";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Informe seu nome").max(100),
@@ -23,6 +24,15 @@ const ContactPopup = () => {
       const timer = setTimeout(() => setOpen(true), 3000);
       return () => clearTimeout(timer);
     }
+  }, []);
+
+  useEffect(() => {
+    const handler = () => {
+      setSubmitted(false);
+      setOpen(true);
+    };
+    window.addEventListener(OPEN_CONTACT_POPUP_EVENT, handler);
+    return () => window.removeEventListener(OPEN_CONTACT_POPUP_EVENT, handler);
   }, []);
 
   const handleClose = () => {

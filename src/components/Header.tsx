@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import logo from "@/assets/logo-clean.png";
+import { openContactPopup } from "@/lib/contactPopup";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
@@ -33,13 +34,14 @@ const Header = () => {
           ))}
         </nav>
 
-        <a
-          href="tel:+5547997725644"
+        <button
+          type="button"
+          onClick={openContactPopup}
           className="hidden lg:flex items-center gap-2 bg-secondary text-secondary-foreground px-5 py-2.5 rounded-lg font-heading font-bold text-sm hover:brightness-110 transition"
         >
           <Phone size={16} />
           (47) 99772-5644
-        </a>
+        </button>
 
         <button
           onClick={() => setOpen(!open)}
@@ -61,13 +63,14 @@ const Header = () => {
               {l.label}
             </a>
           ))}
-          <a
-            href="tel:+5547997725644"
-            className="mx-6 mt-2 flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-5 py-2.5 rounded-lg font-heading font-bold text-sm"
+          <button
+            type="button"
+            onClick={() => { setOpen(false); openContactPopup(); }}
+            className="mx-6 mt-2 flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-5 py-2.5 rounded-lg font-heading font-bold text-sm w-[calc(100%-3rem)]"
           >
             <Phone size={16} />
             (47) 99772-5644
-          </a>
+          </button>
         </div>
       )}
     </header>

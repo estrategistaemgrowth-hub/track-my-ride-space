@@ -1,5 +1,6 @@
 import logo from "@/assets/logo-clean.png";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { openContactPopup } from "@/lib/contactPopup";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
@@ -44,14 +45,14 @@ const Footer = () => (
           <h4 className="font-heading font-bold text-secondary text-sm tracking-widest uppercase mb-5">Contato</h4>
           <ul className="space-y-4">
             <li>
-              <a href="tel:+5547997725644" className="flex items-center gap-3 group">
+              <button type="button" onClick={openContactPopup} className="flex items-center gap-3 group text-left">
                 <div className="w-9 h-9 rounded-lg bg-primary-foreground/5 border border-primary-foreground/10 flex items-center justify-center group-hover:border-secondary/40 transition-colors">
                   <Phone className="text-secondary" size={16} />
                 </div>
                 <div>
                   <p className="font-body text-sm text-primary-foreground/80 group-hover:text-secondary transition-colors">(47) 99772-5644</p>
                 </div>
-              </a>
+              </button>
             </li>
             <li>
               <a href="mailto:comercial.transporteseguro@outlook.com" className="flex items-center gap-3 group">

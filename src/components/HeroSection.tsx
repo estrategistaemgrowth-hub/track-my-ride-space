@@ -1,4 +1,5 @@
 import heroBg from "@/assets/hero_bg.png";
+import { openContactPopup } from "@/lib/contactPopup";
 
 const HeroSection = () => (
   <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden bg-primary">
@@ -24,12 +25,13 @@ const HeroSection = () => (
             Transporte rodoviário de cargas com agilidade, segurança e cobertura em todo o território nacional.
           </p>
           <div className="flex flex-wrap gap-4 animate-fade-in-up" style={{ animationDelay: "0.45s" }}>
-            <a
-              href="#contato"
+            <button
+              type="button"
+              onClick={openContactPopup}
               className="bg-secondary text-secondary-foreground px-8 py-4 rounded-lg font-heading font-bold text-base hover:brightness-110 transition glow-pulse"
             >
               Solicite um Orçamento
-            </a>
+            </button>
             <a
               href="#quem-somos"
               className="border-2 border-primary-foreground/30 text-primary-foreground px-8 py-4 rounded-lg font-heading font-bold text-base hover:bg-primary-foreground/10 transition"

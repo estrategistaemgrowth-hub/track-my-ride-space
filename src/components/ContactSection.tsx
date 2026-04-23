@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { openContactPopup } from "@/lib/contactPopup";
 
 const ContactSection = () => {
   const { ref: titleRef, isVisible: titleVisible } = useScrollReveal();
@@ -19,8 +20,9 @@ const ContactSection = () => {
         </div>
 
         <div ref={gridRef} className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          <a
-            href="tel:+5547997725644"
+          <button
+            type="button"
+            onClick={openContactPopup}
             className={`bg-background rounded-2xl p-8 text-center shadow-lg group card-lift reveal-scale ${gridVisible ? "visible" : ""}`}
             style={{ transitionDelay: "0s" }}
           >
@@ -29,7 +31,7 @@ const ContactSection = () => {
             </div>
             <h3 className="font-heading font-bold text-foreground mb-1">Telefone</h3>
             <p className="font-body text-muted-foreground">(47) 99772-5644</p>
-          </a>
+          </button>
 
           <a
             href="mailto:comercial.transporteseguro@outlook.com"

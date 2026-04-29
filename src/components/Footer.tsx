@@ -55,12 +55,12 @@ const Footer = () => (
               </button>
             </li>
             <li>
-              <a href="mailto:comercial.transporteseguro@outlook.com" className="flex items-center gap-3 group">
+              <a href="mailto:comercial@tfplogistica.com.br" className="flex items-center gap-3 group">
                 <div className="w-9 h-9 rounded-lg bg-primary-foreground/5 border border-primary-foreground/10 flex items-center justify-center group-hover:border-secondary/40 transition-colors">
                   <Mail className="text-secondary" size={16} />
                 </div>
                 <div>
-                  <p className="font-body text-xs text-primary-foreground/80 group-hover:text-secondary transition-colors break-all">comercial.transporteseguro@outlook.com</p>
+                  <p className="font-body text-xs text-primary-foreground/80 group-hover:text-secondary transition-colors break-all">comercial@tfplogistica.com.br</p>
                 </div>
               </a>
             </li>

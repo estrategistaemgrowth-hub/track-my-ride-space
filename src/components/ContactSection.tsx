@@ -34,7 +34,7 @@ const ContactSection = () => {
           </button>
 
           <a
-            href="mailto:comercial.transporteseguro@outlook.com"
+            href="mailto:comercial@tfplogistica.com.br"
             className={`bg-background rounded-2xl p-8 text-center shadow-lg group card-lift reveal-scale ${gridVisible ? "visible" : ""}`}
             style={{ transitionDelay: "0.12s" }}
           >
@@ -42,7 +42,7 @@ const ContactSection = () => {
               <Mail className="text-primary-foreground" size={28} />
             </div>
             <h3 className="font-heading font-bold text-foreground mb-1">Email</h3>
-            <p className="font-body text-muted-foreground text-sm break-all">comercial.transporteseguro@outlook.com</p>
+            <p className="font-body text-muted-foreground text-sm break-all">comercial@tfplogistica.com.br</p>
           </a>
 
           <div
